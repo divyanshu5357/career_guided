@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerConnect - Your Personalized Career Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="anim-fade-in">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                CareerConnect
+            </div>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#courses">Streams</a></li>
+                <li><a href="#colleges">Colleges</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+            </ul>
+            <div id="user-auth-section">
+                <button class="cta-button-nav" id="login-signup-btn">Login / Signup</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="app-container">
+        <!-- HOMEPAGE CONTENT (visible by default) -->
+        <main id="main-content">
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero-text">
+                    <p class="hero-tagline anim-fade-up">#1 Career Guidance Platform</p>
+                    <h1 class="anim-fade-up anim-delay-1">Find The Perfect Career Path For You</h1>
+                    <p class="anim-fade-up anim-delay-2">Confused? Take our free aptitude test to discover your
+                        strengths and get personalized career and course recommendations.</p>
+                    <ul class="hero-features anim-fade-up anim-delay-3">
+                        <li><i class="fa-solid fa-check-circle"></i> Detailed Aptitude Analysis</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Personalized College & Course Suggestions</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Track Important Deadlines</li>
+                    </ul>
+                    <div class="hero-buttons anim-fade-up anim-delay-4">
+                        <button class="cta-button" id="start-quiz-btn-hero">Start Free Aptitude Test</button>
+                        <button class="cta-button-secondary"
+                            onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'});">Explore
+                            Streams</button>
+                    </div>
+                </div>
+                <div class="hero-image-container anim-zoom-in anim-delay-2">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop"
+                        alt="Happy students learning" class="hero-image">
+                    <div class="floating-icon icon-1 anim-float"><i class="fa-solid fa-flask"></i></div>
+                    <div class="floating-icon icon-2 anim-float anim-delay-1"><i
+                            class="fa-solid fa-book-open-reader"></i></div>
+                    <div class="floating-icon icon-3 anim-float anim-delay-2"><i class="fa-solid fa-chart-line"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" class="how-it-works">
+                <h2 class="section-title anim-on-scroll">Teen Aasaan Steps Mein Apna Path Jaano</h2>
+                <div class="steps-container">
+                    <div class="step anim-on-scroll">
+                        <div class="step-icon">1</div>
+                        <h3>Take the Test</h3>
+                        <p>Take our detailed aptitude test to discover your strengths and interests, whether you're
+                            logged in or not.</p>
+                    </div>
+                    <div class="step anim-on-scroll anim-delay-1">
+                        <div class="step-icon">2</div>
+                        <h3>Get Your Report</h3>
+                        <p>Receive an instant report. Sign up for free to save your results and unlock personalized
+                            recommendations.</p>
+                    </div>
+                    <div class="step anim-on-scroll anim-delay-2">
+                        <div class="step-icon">3</div>
+                        <h3>Explore & Decide</h3>
+                        <p>Use your personalized dashboard to explore colleges, courses, and tailored study materials.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses/Streams Section -->
+            <section id="courses" class="courses-section">
+                <h2 class="section-title anim-on-scroll">Apne Interests Ko Pehchano</h2>
+                <div class="courses-container">
+                    <div class="course-card anim-on-scroll" data-stream="Science">
+                        <div class="card-icon science-icon"><i class="fa-solid fa-atom"></i></div>
+                        <h3>Science</h3>
+                        <p>For the curious minds who love to solve problems and understand how the world works.</p><span
+                            class="card-btn">Explore Paths <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="course-card anim-on-scroll anim-delay-1" data-stream="Arts">
+                        <div class="card-icon arts-icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3>Arts & Humanities</h3>
+                        <p>For the creative souls who love to express, write, and understand human culture.</p><span
+                            class="card-btn">Explore Paths <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="course-card anim-on-scroll anim-delay-2" data-stream="Commerce">
+                        <div class="card-icon commerce-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>Commerce</h3>
+                        <p>For the strategic thinkers who understand numbers, business, and management.</p><span
+                            class="card-btn">Explore Paths <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="course-card anim-on-scroll anim-delay-3" data-stream="Vocational">
+                        <div class="card-icon vocational-icon"><i class="fa-solid fa-tools"></i></div>
+                        <h3>Vocational</h3>
+                        <p>For the practical learners who want to gain hands-on skills for specific trades and careers.
+                        </p><span class="card-btn">Explore Paths <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- College Directory Section -->
+            <section id="colleges" class="colleges-section">
+                <h2 class="section-title anim-on-scroll">Find Government Colleges in Punjab</h2>
+                <div class="college-search-controls anim-on-scroll">
+                    <div class="college-search-container"><i class="fa-solid fa-search"></i><input type="text"
+                            id="college-search-bar" placeholder="Search by college name or city..."></div>
+                    <button class="cta-button" id="nearby-colleges-btn"><i class="fa-solid fa-location-crosshairs"></i>
+                        Find Nearby Colleges</button>
+                </div>
+                <div class="college-list-container anim-on-scroll"></div>
+            </section>
+
+            <!-- Timeline Tracker Section -->
+            <section id="timeline" class="timeline-section">
+                <h2 class="section-title anim-on-scroll">Important Dates & Deadlines</h2>
+                <div class="timeline-container anim-on-scroll"></div>
+            </section>
+        </main>
+
+        <!-- DASHBOARD SECTION (for logged-in users, initially hidden) -->
+        <section id="dashboard" style="display: none;">
+            <div class="dashboard-header">
+                <h1 id="welcome-message">Welcome Back!</h1>
+                <p>Here are your personalized recommendations to guide your career journey.</p>
+            </div>
+            <div class="dashboard-grid">
+                <!-- Widget 1: My Aptitude Results -->
+                <div class="dashboard-widget">
+                    <div class="widget-header">
+                        <h3><i class="fa-solid fa-chart-simple"></i> My Aptitude Results</h3><button
+                            class="cta-button-secondary" id="take-new-test-btn">Take New Test</button>
+                    </div>
+                    <div class="widget-content" id="latest-result-content">
+                        <p class="placeholder-text">Loading latest results...</p>
+                    </div>
+                </div>
+
+                <!-- Widget 2: Recommended Colleges -->
+                <div class="dashboard-widget">
+                    <div class="widget-header">
+                        <h3><i class="fa-solid fa-school"></i> Recommended Colleges</h3><a href="#colleges"
+                            id="view-all-colleges-link">View All</a>
+                    </div>
+                    <div class="widget-content" id="recommended-colleges-content">
+                        <p class="placeholder-text">Loading recommendations...</p>
+                    </div>
+                </div>
+
+                <!-- Widget 3: Study Materials -->
+                <div class="dashboard-widget full-width">
+                    <div class="widget-header">
+                        <h3><i class="fa-solid fa-book-bookmark"></i> Tailored Study Materials</h3>
+                    </div>
+                    <div class="widget-content" id="study-materials-content">
+                        <p class="placeholder-text">Loading recommendations...</p>
+                    </div>
+                </div>
+
+                <!-- Widget 4: Recommended Courses -->
+                <div class="dashboard-widget full-width">
+                    <div class="widget-header">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Top Courses For You</h3>
+                    </div>
+                    <div class="widget-content" id="recommended-courses-content">
+                        <p class="placeholder-text">Loading recommendations...</p>
+                    </div>
+                </div>
+
+                <!-- WIDGET 5: AI CAREER COUNSELOR -->
+                <div class="dashboard-widget full-width">
+                    <div class="widget-header">
+                        <h3><i class="fa-solid fa-robot"></i> AI Career Counselor</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div id="ai-chat-container">
+                            <div id="chat-window">
+                                <div class="chat-message ai-message">
+                                    <p>Hello! I am your AI Career Counselor. Ask me anything about courses, jobs, or
+                                        career paths based on your aptitude results.</p>
+                                </div>
+                            </div>
+                            <div id="chat-loading" style="display: none;">
+                                <div class="typing-indicator">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <form id="ai-chat-form">
+                                <input type="text" id="chat-input"
+                                    placeholder="e.g., 'What are some good jobs after B.Tech?'" required>
+                                <button type="submit" id="ai-chat-submit"><i
+                                        class="fa-solid fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MODALS CONTAINER (holds all modals) -->
+        <div id="modal-container">
+            <!-- Auth Modal -->
+            <div class="modal-wrapper" id="auth-container" style="display: none;">
+                <div class="modal-box auth-box anim-zoom-in">
+                    <button class="close-btn" data-target="auth-container"><i class="fa-solid fa-times"></i></button>
+                    <div class="auth-toggle">
+                        <button id="show-login-btn" class="active">Login</button>
+                        <button id="show-signup-btn">Signup</button>
+                    </div>
+                    <form id="login-form">
+                        <h2>Welcome Back!</h2>
+                        <p>Please enter your details to continue.</p>
+                        <div class="input-group"><label for="login-email">Email</label><input type="email"
+                                id="login-email" required></div>
+                        <div class="input-group"><label for="login-password">Password</label><input type="password"
+                                id="login-password" required></div>
+                        <p class="error-message" id="login-error"></p>
+                        <button type="submit" class="cta-button">Login</button>
+                    </form>
+                    <form id="signup-form" style="display: none;">
+                        <h2>Create Your Account</h2>
+                        <p>Get started with your personalized career journey.</p>
+                        <div class="input-group"><label for="signup-name">Full Name</label><input type="text"
+                                id="signup-name" required></div>
+
+                        <!-- NEW FIELDS FOR ADMIN DASHBOARD -->
+                        <div class="input-group"><label for="signup-phone">Phone Number</label><input type="tel"
+                                id="signup-phone" required></div>
+                        <div class="input-group"><label for="signup-city">City</label><input type="text"
+                                id="signup-city" required></div>
+
+                        <div class="input-group"><label for="signup-email">Email</label><input type="email"
+                                id="signup-email" required></div>
+                        <div class="input-group"><label for="signup-password">Password (min. 6 characters)</label><input
+                                type="password" id="signup-password" required></div>
+                        <p class="error-message" id="signup-error"></p>
+                        <button type="submit" class="cta-button">Create Account</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Quiz Modal -->
+            <div class="modal-wrapper" id="quiz-container" style="display: none;">
+                <div class="modal-box anim-zoom-in"><button class="close-btn" data-target="quiz-container"><i
+                            class="fa-solid fa-times"></i></button>
+                    <h2 id="question-text">Question goes here</h2>
+                    <div class="options-container" id="options-container"></div>
+                    <div class="modal-footer">
+                        <p>Question <span id="current-question-num">1</span> of <span id="total-questions-num"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Result Modal -->
+            <div class="modal-wrapper" id="result-container" style="display: none;">
+                <div class="modal-box anim-zoom-in"><button class="close-btn" data-target="result-container"><i
+                            class="fa-solid fa-times"></i></button>
+                    <h2>Your Aptitude Test Result</h2>
+                    <div id="result-content"></div><button class="cta-button" id="retake-quiz-btn">Take Test
+                        Again</button>
+                </div>
+            </div>
+            <!-- Career Path Modal -->
+            <div class="modal-wrapper" id="career-path-container" style="display: none;">
+                <div class="modal-box wide-modal anim-zoom-in"><button class="close-btn"
+                        data-target="career-path-container"><i class="fa-solid fa-times"></i></button>
+                    <h2 id="career-modal-title">Career Paths for Science</h2>
+                    <div class="modal-grid-content" id="career-modal-content"></div>
+                </div>
+            </div>
+            <!-- Detailed Report Modal (for Dashboard) -->
+            <div class="modal-wrapper" id="report-container" style="display: none;">
+                <div class="modal-box anim-zoom-in"><button class="close-btn" data-target="report-container"><i
+                            class="fa-solid fa-times"></i></button>
+                    <h2 id="report-title">Your Detailed Aptitude Report</h2>
+                    <div id="report-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 CareerConnect.Helping students build a better future.Created By CodeBrahmastra.</p>
+        </footer>
+
+        <!-- Firebase SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBgCIj6tYPgP0aeN_dEx-0tmI_w7SqLtro",
+                authDomain: "careeradvisorhackathon.firebaseapp.com",
+                projectId: "careeradvisorhackathon",
+                storageBucket: "careeradvisorhackathon.firebasestorage.app",
+                messagingSenderId: "1009234050196",
+                appId: "1:1009234050196:web:d273a45def922133180881"
+            };
+            let app, auth, db;
+            try {
+                app = firebase.initializeApp(firebaseConfig);
+                auth = firebase.auth();
+                db = firebase.firestore();
+            } catch (e) {
+                console.error("Firebase initialization error:", e);
+            }
+        </script>
+        <script src="script.js"></script>
+</body>
+
+</html>

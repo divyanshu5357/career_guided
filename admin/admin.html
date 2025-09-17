@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - CareerConnect</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="admin-app">
+        <!-- Login View -->
+        <div id="admin-login-view">
+            <div class="login-container">
+                <div class="logo"><i class="fa-solid fa-graduation-cap"></i> CareerConnect Admin</div>
+                <h2>Welcome, Administrator</h2>
+                <p>Please sign in to continue.</p>
+                <form id="admin-login-form">
+                    <div class="input-group"><label for="admin-email">Email</label><input type="email" id="admin-email" required></div>
+                    <div class="input-group"><label for="admin-password">Password</label><input type="password" id="admin-password" required></div>
+                    <button type="submit" class="admin-button">Login</button>
+                    <p class="error-message" id="admin-login-error"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard View (hidden by default) -->
+        <div id="admin-dashboard-view" style="display: none;">
+            <header>
+                <div class="logo"><i class="fa-solid fa-graduation-cap"></i> CareerConnect Admin</div>
+                <button id="admin-logout-btn" class="admin-button secondary">Logout</button>
+            </header>
+            <main>
+                <div class="dashboard-widget">
+                    <h2><i class="fa-solid fa-users"></i> Student Leads</h2>
+                    <div class="table-container">
+                        <table id="students-table">
+                            <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>City</th><th>Latest Test Result</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-widget">
+                    <h2><i class="fa-solid fa-school"></i> Manage Colleges</h2>
+                    <form id="add-college-form">
+                        <input type="text" name="name" placeholder="College Name" required>
+                        <input type="text" name="city" placeholder="City" required>
+                        <input type="url" name="image" placeholder="Image URL" required>
+                        <input type="text" name="lat" placeholder="Latitude (e.g., 30.9010)" required>
+                        <input type="text" name="lon" placeholder="Longitude (e.g., 75.8573)" required>
+                        <input type="text" name="courses" placeholder="Courses (comma-separated)" required>
+                        <input type="text" name="facilities" placeholder="Facilities (comma-separated)" required>
+                        <button type="submit">Add College</button>
+                    </form>
+                    <h3>Existing Colleges</h3>
+                    <div class="table-container">
+                        <table id="colleges-table">
+                            <thead><tr><th>Name</th><th>City</th><th>Actions</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- NEW WIDGET: MANAGE TIMELINE -->
+                <div class="dashboard-widget">
+                    <h2><i class="fa-solid fa-calendar-alt"></i> Manage Important Dates</h2>
+                    <form id="add-event-form">
+                        <input type="text" name="title" placeholder="Event Title (e.g., JEE Mains)" required>
+                        <input type="text" name="description" placeholder="Short Description">
+                        <select name="type" required>
+                            <option value="" disabled selected>Select Type</option>
+                            <option value="exam">Exam</option>
+                            <option value="admission">Admission</option>
+                            <option value="scholarship">Scholarship</option>
+                        </select>
+                        <input type="date" name="deadline" required>
+                        <button type="submit">Add Event</button>
+                    </form>
+                    <h3>Existing Events</h3>
+                    <div class="table-container">
+                        <table id="events-table">
+                            <thead><tr><th>Title</th><th>Type</th><th>Deadline</th><th>Actions</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBgCIj6tYPgP0aeN_dEx-0tmI_w7SqLtro",
+            authDomain: "careeradvisorhackathon.firebaseapp.com",
+            projectId: "careeradvisorhackathon",
+            storageBucket: "careeradvisorhackathon.firebasestorage.app",
+            messagingSenderId: "1009234050196",
+            appId: "1:1009234050196:web:d273a45def922133180881"
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="admin.js"></script>
+</body>
+</html>
+
+
